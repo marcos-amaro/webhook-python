@@ -42,6 +42,7 @@ HTML_TEMPLATE = """
                 <td>{{ msg.email }}</td>
                 <td>{{ msg.subject }}</td>
                 <td>{{ msg['message-id'] }}</td>
+                <td>{{ msg['auth'] }}</td>
             </tr>
             {% endfor %}
         </tbody>
