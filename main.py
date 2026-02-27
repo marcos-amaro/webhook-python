@@ -32,7 +32,6 @@ HTML_TEMPLATE = """
                 <th>Email</th>
                 <th>Asunto</th>
                 <th>ID Mensaje</th>
-                <th>Data</th>
             </tr>
         </thead>
         <tbody>
@@ -43,7 +42,6 @@ HTML_TEMPLATE = """
                 <td>{{ msg.email }}</td>
                 <td>{{ msg.subject }}</td>
                 <td>{{ msg['message-id'] }}</td>
-                <td>{{ msg['auth'] }}</td>
             </tr>
             {% endfor %}
         </tbody>
@@ -60,6 +58,7 @@ def index():
 @app.route('/webhook', methods=['POST'])
 def webhook():
     # Intentar obtener el JSON del payload
+    print(request.headers)
     data = request.json
     
     if data:
