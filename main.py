@@ -32,6 +32,7 @@ HTML_TEMPLATE = """
                 <th>Email</th>
                 <th>Asunto</th>
                 <th>ID Mensaje</th>
+                <th>Data</th>
             </tr>
         </thead>
         <tbody>
